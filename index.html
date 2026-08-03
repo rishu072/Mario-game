@@ -4,21 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Mario Game</title>
 </head>
 <body>
-    <div class="game">
-        <div class="score">Score: 0</div>
-        <div class="mario">
-            <img src="./marioimage.png" alt="">
+    <div class="game-container">
+        <div class="game">
+            <div class="hud">
+                <div class="score">Score: 0</div>
+                <div class="high-score">High: 0</div>
+                <button id="soundToggle" class="sound-toggle-btn">🔊</button>
+            </div>
+
+            <div class="mario">
+                <img src="./marioimage.png" alt="Mario">
+            </div>
+
+            <div class="obstacle"></div>
+            <div class="coin"></div>
+
+            <div class="game-over">
+                <h1>Game Over</h1>
+                <div class="stats-box">
+                    <p class="final-score">Score: 0</p>
+                    <p class="best-score">Best: 0</p>
+                </div>
+                <button class="start-over-btn">Start Over</button>
+            </div>
         </div>
-        <div class="obstacle"></div>
-        <div class="game-over">
-            <h1>Game Over</h1>
-            <button>Start Over</button>
+
+        <div class="touch-controls">
+            <div class="dir-buttons">
+                <button id="btnLeft" class="touch-btn">◀</button>
+                <button id="btnRight" class="touch-btn">▶</button>
+            </div>
+            <button id="btnJump" class="touch-btn jump-btn">JUMP ▲</button>
         </div>
     </div>
-
 
     <script src="script.js"></script>
 </body>
